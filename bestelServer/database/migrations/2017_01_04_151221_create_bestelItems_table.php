@@ -15,7 +15,7 @@ class CreateBestelItemsTable extends Migration
     {
         Schema::create('bestelItems', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('bestel_id');
+            $table->integer('bestellingen_id');
             $table->string('naam');
             $table->integer('aantal');
             $table->timestamps();

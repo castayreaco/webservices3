@@ -15,7 +15,7 @@ class CreateWinkelItem extends Migration
     {
         Schema::create('winkel_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('winkels_id');
+            $table->integer('winkel_id');
             $table->string('naam');
             $table->double('prijs');
             $table->timestamps();
