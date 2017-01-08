@@ -112,7 +112,11 @@ Naast de informatie die staat op `letsencrypt.org` heb ik ook nog volgende tutor
 
 ## Backup ##
 
-Ik maak elke ochtend om 05h00 een back-up van mijn website en database. Dit doe ik a.d.h.v. rcopy. 
+Ik wil elke ochtend een back-up van mijn databank maken. Dit door gebruik te maken van `crontab`. Hiermee kan je eender welk commando laten uitvoeren op eender welk tijdstip. Dagelijks, wekelijks, maandelijks of jaarlijks. 
+
+    30 6   * * *   root    mysqldump -u root -pWachtwoord bestelServer > /home/pi/backup/backup_$(date +"%Y_%m_%d_%I_%M_%p").sql
+
+> https://www.youtube.com/watch?v=vrPGRE6FV9g
 
 ## Front-end ##
 
